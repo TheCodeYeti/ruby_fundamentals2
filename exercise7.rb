@@ -4,11 +4,17 @@ students = {
   :cohort3 => 22
 }
 
-def display_students(students)
+def display_students(students, keys_method = false)
+
+
   students.each do |cohort, count|
-    puts "#{cohort} : #{count} students"
+    if keys_method == true
+      puts "#{cohort} : #{count} students"
+    else
+      puts "#{cohort} : #{students[cohort]} students"
+    end
   end
-    puts
+  puts
 end
 
 display_students(students)
@@ -17,3 +23,6 @@ puts "Adding cohort4"
 students[:cohort4] = 43
 
 display_students(students)
+
+puts "displaying using key method"
+display_students(students, true)
