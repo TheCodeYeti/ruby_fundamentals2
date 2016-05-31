@@ -26,3 +26,17 @@ display_students(students)
 
 puts "displaying using key method"
 display_students(students, true)
+
+puts "Classrooms have grown by 5%!"
+students.each do |cohort, number|
+    number += (number   * (5.00/100)).round
+    students[cohort] = number
+end
+
+display_students(students)
+
+total = 0
+students.each do |cohort, number|
+  total += number
+end
+puts "The total number of students across all cohorts is now #{total}!"
