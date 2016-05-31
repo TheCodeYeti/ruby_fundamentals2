@@ -24,3 +24,8 @@ puts "The second item on the list is #{grocery_list[1]}"
 
 puts "I had better sort this list"
 print_grocery_list(grocery_list, true)
+
+puts "I'm not going to find the salmon. I'll take it off the list"
+
+grocery_list.delete("salmon")
+print_grocery_list(grocery_list, true)
