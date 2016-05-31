@@ -8,6 +8,12 @@ def display_students(students)
   students.each do |cohort, count|
     puts "#{cohort} : #{count} students"
   end
+    puts
 end
+
+display_students(students)
+
+puts "Adding cohort4"
+students[:cohort4] = 43
 
 display_students(students)
